@@ -6,4 +6,4 @@ This simple message framework can help you to handle the messages. Here are the 
 * lib/GCommonFuncUtility.js: All of the specific functions will be listed here.
 * index.html: a simple html file with two buttons. Please note that this html file inclde an additional library from https://github.com/fgnass/spin.js/
 
-If you click start button on the web page. You will see a running spin.
+If you click start button on the web page, there will be a running spin.
