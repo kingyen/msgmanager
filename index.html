@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Message Manager Example</title>
+
+    <script src="lib/GCommonFuncUtility.js"></script>
+    <script src="lib/MsgManager.js"></script>
+
+    <script src="http://spin.js.org/spin.js"></script>
+
+</head>
+<body>
+
+<div id="container">
+    <button onclick="testFunc1()" class="mybutton1">Start</button>
+    <button onclick="testFunc2()" class="mybutton2">Remove</button> 
+</div>
+
+<script>
+
+    var msgMgr = new MsgManager();
+    
+    init();
+    running();
+
+    //1. Init
+    function init(){
+        msgMgr.init();
+    }
+
+    //2. Update
+    function running()
+    {
+        requestAnimationFrame( running );
+        msgMgr.run();
+    }
+
+    function testFunc1()
+    {
+        msgMgr.pushMsg( "START_LOADING_ANIM" );
+    }
+
+    function testFunc2()
+    {
+        msgMgr.pushMsg( "REMOVE_LOADING_ANIM" );
+    }
+
+</script>
+    
+</body>
+</html>
